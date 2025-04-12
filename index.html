@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Email Summarizer</h1>
+            <p class="subtitle">Using Mistral-7B to summarize your emails</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea id="email-input" placeholder="Paste your email content here..."></textarea>
+                <div class="controls">
+                    <button id="summarize-btn">Summarize</button>
+                    <div class="status" id="status">Ready</div>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <div class="output-header">
+                    <h2>Summary</h2>
+                    <button id="copy-btn">Copy</button>
+                </div>
+                <div id="summary-output" class="summary-output"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Note: This uses the Hugging Face API and requires an API key.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
